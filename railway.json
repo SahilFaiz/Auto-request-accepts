@@ -13,19 +13,19 @@
   "env": {
     "BOT_TOKEN": {
       "description": "Your Bot Token From @BotFather",
-      "value": "7053546216:AAEcpTFadfIsbj0bEP6rD9DbC-iy5YBy4F0"
+      "value": ""
     },
     "API_ID": {
       "description": "Your APP ID",
-      "value": "22163856"
+      "required": ""
     },
     "API_HASH": {
       "description": "Your API Hash",
-      "value": "5c7fd7dded5675ce397690fa84d9ed4c"
+      "required": ""
     },
     "CHAT_ID": {
       "description": "Group/Channel ID Which you are going to use this bot",
-      "value": "-1002106669217"
+      "required": ""
     },
     "APPROVED_WELCOME": {
       "description": "APPROVED_WELCOME On Or Off",
