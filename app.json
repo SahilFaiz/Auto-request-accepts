@@ -23,7 +23,7 @@
         },
         "BOT_TOKEN": {
             "description": "Your Bot Token From @BotFather",
-            "value": "7053546216:AAG3plG6EDIdMtAzvh8JO9usNqh88fxvQoQ"
+            "value": "7053546216:AAEcpTFadfIsbj0bEP6rD9DbC-iy5YBy4F0"
         },
         "CHAT_ID": {
             "description": "Working Group ID @MT_ID_Bot",
