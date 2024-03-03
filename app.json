@@ -1,51 +1,39 @@
 {
-    "name": "Auto-Approved-Bot",
-    "description": "Iam Auto-Approved-Bot @pr0fess0r_99",
-    "keywords": [
-        "Auto",
-        "Approved",
-        "Group",
-        "Invite",
-        "Link",
-        "Bot"
-    ],
-    "website": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
-    "repository": "https://github.com/PR0FESS0R-99/Auto-Approved-Bot",
-    "success_url": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
-    "env": {
-        "API_ID": {
-            "description": "Your APP ID From https://youtu.be/5eEsvLAKVc0 or @MT_MyTelegramOrg_Bot",
-            "value": "22163856"
-        },
-        "API_HASH": {
-            "description": "Your API Hash From https://youtu.be/5eEsvLAKVc0 or @MT_MyTelegramOrg_Bot",
-            "value": "5c7fd7dded5675ce397690fa84d9ed4c"
-        },
-        "BOT_TOKEN": {
-            "description": "Your Bot Token From @BotFather",
-            "value": "7053546216:AAEcpTFadfIsbj0bEP6rD9DbC-iy5YBy4F0"
-        },
-        "CHAT_ID": {
-            "description": "Working Group ID @MT_ID_Bot",
-            "value": "-1002106669217"
-        },
-        "APPROVED_WELCOME": {
-            "description": "APPROVED_WELCOME On Or Off",
-            "value": "on"
-        },
-        "APPROVED_WELCOME_TEXT": {
-            "description": "APPROVED_WELCOME_TEXT : Welcome Text",
-            "value": "Hello {mention}\nWelcome To {title}\n\nYour Auto Approved"
-        }
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "startCommand": "python3 bot.py",
+    "sleepApplication": false,
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  },
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Bot Token From @BotFather",
+      "required": true
     },
-    "addons": [],
-    "buildpacks": [{
-        "url": "heroku/python"
-    }],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "eco"
-        }
+    "API_ID": {
+      "description": "Your APP ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your API Hash",
+      "required": true
+    },
+    "CHAT_ID": {
+      "description": "Group/Channel ID Which you are going to use this bot",
+      "required": true
+    },
+    "APPROVED_WELCOME": {
+      "description": "APPROVED_WELCOME On Or Off",
+      "value": "on"
+    },
+    "APPROVED_WELCOME_TEXT": {
+      "description": "APPROVED_WELCOME_TEXT : Welcome Text",
+      "value": "**Hello {mention}\nWelcome To {title}\n\nYour Request Is Approved.**"
     }
+  }
 }
